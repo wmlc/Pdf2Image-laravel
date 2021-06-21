@@ -1,5 +1,5 @@
 {
-    "name": "wmlc/Pdf2Image-laravel",
+    "name": "wmlc/pdf2image",
     "description": "Convert pdf files to images",
     "keywords": ["pdf to image", "pdf", "laravel", "convert image ", "pdt-to-image", "laravel 5"],
     "require": {
