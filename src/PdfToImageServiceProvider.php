@@ -1,10 +1,10 @@
 <?php
 
-namespace JianhuaWang\PdfToImage;
+namespace wmlc\Pdf2Image;
 
 use Illuminate\Support\ServiceProvider;
 
-class PdfToImageServiceProvider extends ServiceProvider
+class Pdf2ImageServiceProvider extends ServiceProvider
 {
      /**
      * 服务提供者加是否延迟加载.
@@ -30,8 +30,8 @@ class PdfToImageServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('PdfToImage',function(){
-            return new \JianhuaWang\PdfToImage\PdfToImageMaker();
+        $this->app->bind('Pdf2Image',function(){
+            return new \wmlc\Pdf2Image\Pdf2ImageMaker();
         });
     }
     
@@ -42,7 +42,7 @@ class PdfToImageServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['PdfToImage'];
+        return ['Pdf2Image'];
     }
     
 }

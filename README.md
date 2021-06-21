@@ -1,4 +1,5 @@
 # laravel-pdf-to-image
+
 Convert pdf files to images for Laravel 5
 
 
@@ -28,17 +29,18 @@ Laravel 5下的 PDF 转图片工具包，
    then： you will find a new file image.php in folder config. Change " 'driver' => 'gd' " to "  'driver' => 'imagick' "
 </p>
 
-<h4>安装Installation:</h4>
-<p>
-composer require jianhuawang/laravel-pdf-to-image:0.4
-</p>
+## 安装Installation:
+```
+composer require wmlc/Pdf2Image-laravel
+```
+
 <h5>Laravel >= 5.5, after install nothing left to do.</h5>
 <h5>Laravel <5.5</h5>
 <p>
   Add a provider in providers array in config/app.php:<br/>
-  JianhuaWang\PdfToImage\PdfToImageMaker::class,<br/>
+  wmlc\Pdf2Image\Pdf2ImageMaker::class,<br/>
   Add a aliase in aliases array:<br/>
-  'PdfToImage'=>JianhuaWang\PdfToImage\PdfToImageFacade::class,
+  'PdfToImage'=>wmlc\Pdf2Image\Pdf2ImageFacade::class,
   
   
   </p>
@@ -46,25 +48,26 @@ composer require jianhuawang/laravel-pdf-to-image:0.4
      
   </p>
 
-<h4>用法Usage:</h4>
-<ol>
- <li>
-    Following code will read pdf file on (project root) + /storage/app/test.pdf, and convert first page to image, the image will be saved on (project root) + /storage/app/(current date)/(seconds).jpg
-    
-      $pdfFileNameWithPath='test.pdf';
-      $converter=new JianhuaWang\PdfToImage\PdfToImageMaker($pdfFileNameWithPath);
+## 用法
 
-      $converter->saveImage();// Default action is converting all pages to images.
-        
-  </li>
-  <li>
-  <p>
-    The following codes has same function with above.
-  </p>
-  <p>
-    
-    use PdfToImage;
-    PdfToImage::pdfFile('test.pdf')->saveImage();
-  </p>
-</li>
-</ol>
+### Get pdf file pages count
+```html
+use Pdf2Image;
+
+$pageCount = Pdf2Image::pdfFile(public_path() . "/imgs/test.pdf")->totalPages();
+```
+
+### Pdf all page to imgs
+```html
+use Pdf2Image;
+
+Pdf2Image::pdfFile(public_path() . "/imgs/test.pdf")->saveImages();
+```
+
+### Pdf one page to img
+```html
+use Pdf2Image;
+
+Pdf2Image::pdfFile(public_path() . "/imgs/test.pdf")->saveImage(0);
+
+```

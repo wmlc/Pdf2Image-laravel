@@ -6,16 +6,16 @@
  * and open the template in the editor.
  */
 
-namespace JianhuaWang\PdfToImage;
+namespace wmlc\Pdf2Image;
 
 /**
- * Description of PdfToImageFacade
+ * Description of Pdf2ImageFacade
  *
  * @author jianhua.wang
  */
 use Illuminate\Support\Facades\Facade;
 
-class PdfToImageFacade extends Facade
+class Pdf2ImageFacade extends Facade
 {
 
     /**
@@ -24,7 +24,7 @@ class PdfToImageFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'PdfToImage';
+        return 'Pdf2Image';
     }
 
 }

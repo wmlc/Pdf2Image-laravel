@@ -1,6 +1,6 @@
 <?php
 
-namespace JianhuaWang\PdfToImage;
+namespace wmlc\Pdf2Image;
 
 /**
  * split pdf file and save as image by one page
@@ -9,7 +9,7 @@ namespace JianhuaWang\PdfToImage;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Storage;
 
-class PdfToImageMaker
+class Pdf2ImageMaker
 {
 
     protected $imageMaker;
