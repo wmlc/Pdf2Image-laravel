@@ -4,8 +4,7 @@
     "keywords": ["pdf to image", "pdf", "laravel", "convert image ", "pdt-to-image", "laravel 5"],
     "require": {
         "ext-imagick" : "*",
-        "intervention/image": "^2.0",
-        "illuminate/support": "5.*"
+        "intervention/image": "^2.0"
     },
     "license": "MIT",
     "authors": [

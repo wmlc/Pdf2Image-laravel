@@ -31,7 +31,7 @@ Laravel 5下的 PDF 转图片工具包，
 
 ## 安装Installation:
 ```
-composer require wmlc/Pdf2Image-laravel
+composer require wmlc/pdf2image
 ```
 
 <h5>Laravel >= 5.5, after install nothing left to do.</h5>
