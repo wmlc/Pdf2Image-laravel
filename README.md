@@ -1,3 +1,5 @@
+# 已废弃
+
 # laravel-pdf-to-image
 
 Convert pdf files to images for Laravel 5
